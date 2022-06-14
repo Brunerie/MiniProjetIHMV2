@@ -1,6 +1,8 @@
 package fr.brunerie.projet.application;
 
+import fr.brunerie.projet.metier.entite.Personne;
 import fr.brunerie.projet.metier.manager.PersonneManager;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -21,6 +23,23 @@ public class editionController {
     public TextField adressePersonneField;
     public Button btnValider;
 
+    public void initialize() {
+        Platform.runLater(() -> {
+
+            System.out.println( " idPersonne initialize : " + this.idPersonne);
+            Personne personne = PersonneManager.getInstance().getPersonne(this.idPersonne);
+            this.nomPersonneField.setText(personne.getNom());
+            this.prenomPersonneField.setText(personne.getPrenom());
+            this.telPersonneField.setText(personne.getTelephone());
+            this.emailPersonneField.setText(personne.getMail());
+            this.adressePersonneField.setText(personne.getAdresse());
+            System.out.println(personne.getIdPersonne());
+        });
+    }
+
+    public void setIdPersonne(int idPersonne) {
+        this.idPersonne = idPersonne;
+    }
 
     public void editerPersonne(){
         String nom = nomPersonneField.getText();
@@ -29,7 +48,7 @@ public class editionController {
         String email = emailPersonneField.getText();
         String adresse = adressePersonneField.getText();
         if(!nom.equals("") && !prenom.equals("") && !tel.equals("") && !email.equals("")){
-            PersonneManager.getInstance().updatePersonne(idPersonne, nom, prenom, tel, email, adresse);
+            PersonneManager.getInstance().updatePersonne(idPersonne, nom, prenom,adresse, email, tel);
             Stage stage = (Stage) btnValider.getScene().getWindow();
             stage.close();
         }

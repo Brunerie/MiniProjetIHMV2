@@ -62,7 +62,7 @@ public class StockagePersonneDatabase implements Stockage<Personne> {
     public Personne getById(int id) {
         Personne personne = new Personne();
         try {
-            String requete = "SELECT * FROM Personne WHERE id = ?";
+            String requete = "SELECT * FROM personne WHERE idPersonne = ?";
             PreparedStatement statement = SQLUtils.connection.prepareStatement(requete, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
             statement.setInt(1, id);
             ResultSet result = statement.executeQuery();

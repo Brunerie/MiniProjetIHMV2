@@ -68,6 +68,6 @@ public class Personne {
 
     @Override
     public String toString() {
-        return "Nom=" + nom + ", Prenom=" + prenom + ", Adresse=" + adresse + ", Mail=" + mail + ", Telephone=" + telephone;
+        return "idPersonne=" + idPersonne + "Nom=" + nom + ", Prenom=" + prenom + ", Adresse=" + adresse + ", Mail=" + mail + ", Telephone=" + telephone;
     }
 }

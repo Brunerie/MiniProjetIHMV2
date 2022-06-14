@@ -5,34 +5,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.brunerie.projet.application.accueilController">
-    <center>
-        <VBox fx:id="root">
-            <Button fx:id="btnAccueil" text="Start" onAction="#addListerner">
-               <padding>
-                    <Insets left="10" right="10" top="10" bottom="10"/>
-                </padding>
-            </Button>
-            <VBox fx:id="VboxAccueil"  alignment="CENTER" spacing="10" visible="false">
-                <Text scaleX="2" scaleY="2" text="Accueil">
-                    <VBox.margin>
-                        <Insets top="10.0" />
-                    </VBox.margin>
-                </Text>
-                <ListView fx:id="personnes" VBox.vgrow="ALWAYS">
-
-                </ListView>
-                <HBox alignment="CENTER" spacing="15">
-                    <Button onAction="#creerNouvellePersonne">Nouveau</Button>
-                    <Button onAction="#editerPersonne">Editer</Button>
-                    <Button onAction="#supprimerPersonne">Supprimer</Button>
-                    <Button onAction="#rafraichirListePersonnes">Rafraichir</Button>
-                    <padding>
-                        <Insets bottom="10.0" />
-                    </padding>
-                </HBox>
-            </VBox>
-        </VBox>
-    </center>
-
-</BorderPane>
+<VBox fx:id="root" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.brunerie.projet.application.accueilController" alignment="BOTTOM_LEFT">
+    <Label fx:id="carnetAdresse" text="Carnet d'adresse">
+        <padding>
+            <Insets top="10" right="10" bottom="150" left="10"/>
+        </padding>
+    </Label>
+    <Label fx:id="lancerAppli" text="Lancer l'application pour commencer">
+        <padding>
+            <Insets top="10" right="10" bottom="150" left="10"/>
+        </padding>
+    </Label>
+    <Button fx:id="btnAccueil" text="Start" onAction="#addListerner">
+       <padding>
+            <Insets left="10" right="10" top="10" bottom="10"/>
+        </padding>
+    </Button>
+</VBox>
