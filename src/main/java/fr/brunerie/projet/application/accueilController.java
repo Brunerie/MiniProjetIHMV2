@@ -9,11 +9,14 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+import javax.xml.soap.Text;
 import java.io.IOException;
 import java.util.List;
 
@@ -29,11 +32,34 @@ public class accueilController {
 
     public void initialize() {
         System.out.println(btnAccueil);
+        root.setAlignment(javafx.geometry.Pos.CENTER);
     }
 
     public void addListerner(){
         this.rafraichirListePersonnes();
         VboxAccueil.setVisible(true);
+        VBox VboxAccueil = new VBox();
+        VboxAccueil.setAlignment(javafx.geometry.Pos.CENTER);
+        VboxAccueil.setSpacing(10);
+
+        Label label = new Label("Accueil");
+        VboxAccueil.getChildren().add(label);
+
+        this.personnes = new ListView<>();
+        VBox.setVgrow(this.personnes, javafx.scene.layout.Priority.ALWAYS);
+        VboxAccueil.getChildren().add(this.personnes);
+
+        HBox hbox = new HBox();
+        hbox.setSpacing(15);
+        hbox.setAlignment(javafx.geometry.Pos.CENTER);
+        Button btnNouvellePersonne = new Button("Nouveau");
+        Button btnEditerPersonne = new Button("Editer");
+        Button btnSupprimerPersonne = new Button("Supprimer");
+        Button btnRafraichir = new Button("Rafraichir");
+        hbox.setPadding(new javafx.geometry.Insets(0, 0, 10, 0));
+        hbox.getChildren().addAll(btnNouvellePersonne, btnEditerPersonne, btnSupprimerPersonne, btnRafraichir);
+
+
         root.getChildren().remove(btnAccueil);
         Scene scene = this.VboxAccueil.getScene();
         scene.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
