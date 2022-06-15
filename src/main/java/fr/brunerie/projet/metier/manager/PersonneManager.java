@@ -22,7 +22,7 @@ public class PersonneManager {
         this.stockageRessourceStub.create(personne);
     }
 
-    public void updatePersonne(int id, String nom, String prenom, String adresse, String telephone, String mail) {
+    public void updatePersonne(int id, String nom, String prenom, String adresse, String mail, String telephone) {
         Personne personne = this.stockageRessourceStub.getById(id);
         personne.setNom(nom);
         personne.setPrenom(prenom);

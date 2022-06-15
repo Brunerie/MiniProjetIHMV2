@@ -74,8 +74,6 @@ public class editionController {
         }
     }
 
-
-
     @FXML
     public void validerFormulaire(KeyEvent keyEvent) {
         if(keyEvent.getCode() == KeyCode.ENTER) {
