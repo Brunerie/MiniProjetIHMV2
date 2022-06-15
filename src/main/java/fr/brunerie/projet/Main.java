@@ -8,7 +8,7 @@ public class Main  extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        new AccueilStage();
+        AccueilStage accueilStage = new AccueilStage();
     }
 
     public static void main(String[] args) {

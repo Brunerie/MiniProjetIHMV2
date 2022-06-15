@@ -14,8 +14,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 
 import javax.xml.soap.Text;
@@ -35,10 +34,12 @@ public class accueilController {
     private boolean isCTRL = false;
 
     public void initialize() {
-        System.out.println(btnAccueil);
+        Image image = new Image("fr/brunerie/projet/ihm/view/images/fond.jpg");
+        BackgroundImage backgroundImage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT,BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+        root.setBackground(new Background(backgroundImage));
         root.setAlignment(javafx.geometry.Pos.CENTER);
         carnetAdresse.setFont(new Font(50));
-        lancerAppli.setFont(new Font(20));
+        lancerAppli.setFont(new Font(15));
     }
 
     public void addListerner(){

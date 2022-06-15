@@ -30,9 +30,9 @@ public class editionController {
             Personne personne = PersonneManager.getInstance().getPersonne(this.idPersonne);
             this.nomPersonneField.setText(personne.getNom());
             this.prenomPersonneField.setText(personne.getPrenom());
-            this.telPersonneField.setText(personne.getTelephone());
-            this.emailPersonneField.setText(personne.getMail());
             this.adressePersonneField.setText(personne.getAdresse());
+            this.emailPersonneField.setText(personne.getMail());
+            this.telPersonneField.setText(personne.getTelephone());
             System.out.println(personne.getIdPersonne());
         });
     }

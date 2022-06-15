@@ -16,26 +16,29 @@
                     <Insets top="10.0" />
                 </VBox.margin>
             </Text>
-            <HBox>
+            <HBox alignment="CENTER">
                 <GridPane alignment="CENTER" prefHeight="250.0" prefWidth="300.0" vgap="20" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
-                    <Label fx:id="nom" text="Nom" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <Label text="Nom" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                     <TextField fx:id="nomPersonneField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
-                    <Label fx:id="prenom" text="Prénom" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <Label text="Prénom" GridPane.columnIndex="0" GridPane.rowIndex="1" />
                     <TextField fx:id="prenomPersonneField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                    <Label fx:id="tel" text="Téléphone" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                    <TextField fx:id="telPersonneField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Label text="Adresse" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextField fx:id="adressePersonneField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-                    <Label fx:id="email" text="Email" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-                    <TextField fx:id="emailPersonneField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    <Label text="Email" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <TextField fx:id="emailPersonneField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-                    <Label fx:id="adresse" text="Adresse" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-                    <TextField fx:id="adressePersonneField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-
-                    <Button fx:id="btnValider" onAction="#editerPersonne" text="Valider" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                    <Label text="Téléphone" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                    <TextField fx:id="telPersonneField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                 </GridPane>
             </HBox>
         </VBox>
     </center>
+    <bottom>
+        <VBox alignment="CENTER">
+            <Button fx:id="btnValider" onAction="#editerPersonne" text="Valider"/>
+        </VBox>
+    </bottom>
 </BorderPane>

@@ -8,12 +8,12 @@
 <VBox fx:id="root" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.brunerie.projet.application.accueilController" alignment="BOTTOM_LEFT">
     <Label fx:id="carnetAdresse" text="Carnet d'adresse">
         <padding>
-            <Insets top="10" right="10" bottom="150" left="10"/>
+            <Insets top="10" right="10" bottom="90" left="10"/>
         </padding>
     </Label>
     <Label fx:id="lancerAppli" text="Lancer l'application pour commencer">
         <padding>
-            <Insets top="10" right="10" bottom="150" left="10"/>
+            <Insets top="30" right="10" bottom="50" left="10"/>
         </padding>
     </Label>
     <Button fx:id="btnAccueil" text="Start" onAction="#addListerner">
