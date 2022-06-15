@@ -28,9 +28,26 @@ public class ajoutContactController {
         String email = emailContactField.getText();
         String adresse = adresseContactField.getText();
         if(!nom.equals("") && !prenom.equals("") && !tel.equals("") && !email.equals("") && !adresse.equals("")){
-            PersonneManager.getInstance().createPersonne(nom, prenom, adresse, email,tel);
-            Stage stage = (Stage) btnValider.getScene().getWindow();
-            stage.close();
+            if (email.matches("^(.+)@(.+)$")) {
+                if (tel.matches("(?:(?:\\+|00)33|0)\\s*[1-9](?:[\\s.-]*\\d{2}){4}")){
+                    PersonneManager.getInstance().createPersonne(nom, prenom, adresse, email,tel);
+                    Stage stage = (Stage) btnValider.getScene().getWindow();
+                    stage.close();
+                }else{
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Erreur");
+                    alert.setHeaderText("Numéro de téléphone invalide");
+                    alert.setContentText("Veuillez entrer un numéro de téléphone valide");
+                    alert.showAndWait();
+                }
+            }
+            else{
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Erreur");
+                alert.setHeaderText("Email invalide");
+                alert.setContentText("Veuillez entrer un email valide");
+                alert.showAndWait();
+            }
         }else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erreur");

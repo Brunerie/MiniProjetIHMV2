@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -58,6 +59,7 @@ public class accueilController {
         hbox.setSpacing(15);
         hbox.setAlignment(javafx.geometry.Pos.CENTER);
         Button btnNouvellePersonne = new Button("Nouveau");
+        btnNouvellePersonne.setTooltip(new Tooltip("CTRL + N"));
         btnNouvellePersonne.setOnAction(event -> {
             try {
                 creerNouvellePersonne();
@@ -66,6 +68,7 @@ public class accueilController {
             }
         });
         Button btnEditerPersonne = new Button("Editer");
+        btnEditerPersonne.setTooltip(new Tooltip("CTRL + E"));
         btnEditerPersonne.setOnAction(event -> {
             try {
                 editerPersonne();
@@ -74,6 +77,7 @@ public class accueilController {
             }
         });
         Button btnSupprimerPersonne = new Button("Supprimer");
+        btnSupprimerPersonne.setTooltip(new Tooltip("SUPPR"));
         btnSupprimerPersonne.setOnAction(event -> {
             try {
                 supprimerPersonne();
@@ -82,6 +86,7 @@ public class accueilController {
             }
         });
         Button btnRafraichir = new Button("Rafraichir");
+        btnRafraichir.setTooltip(new Tooltip("CTRL + R"));
         btnRafraichir.setOnAction(event -> {
             rafraichirListePersonnes();
         });

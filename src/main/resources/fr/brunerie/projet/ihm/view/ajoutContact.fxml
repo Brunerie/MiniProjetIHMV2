@@ -16,25 +16,28 @@
             <HBox alignment="CENTER">
                 <GridPane alignment="CENTER" prefHeight="250.0" prefWidth="300.0" vgap="20" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" hgap="10">
                     <Label text="Nom" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                    <TextField fx:id="nomContactField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    <TextField fx:id="nomContactField" GridPane.columnIndex="1" GridPane.rowIndex="0" promptText="Rocher..." />
 
                     <Label text="Prénom" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                    <TextField fx:id="prenomContactField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <TextField fx:id="prenomContactField" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="Pierre..."/>
 
                     <Label text="Adresse" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                    <TextField fx:id="adresseContactField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <TextField fx:id="adresseContactField" GridPane.columnIndex="1" GridPane.rowIndex="2" promptText="32 rue de la Carrière" />
 
-                    <Label text="Email" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                    <TextField fx:id="emailContactField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Label text="Email" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <TextField fx:id="emailContactField" GridPane.columnIndex="1" GridPane.rowIndex="3" promptText="pierre.rocher@caillou.fr"/>
 
                     <Label text="Téléphone" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-                    <TextField fx:id="telContactField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    <TextField fx:id="telContactField" GridPane.columnIndex="1" GridPane.rowIndex="4" promptText="06 58 39 54 11" />
                 </GridPane>
             </HBox>
         </VBox>
     </center>
     <bottom>
         <VBox alignment="CENTER">
+            <padding>
+                <Insets bottom="50.0" />
+            </padding>
             <Button fx:id="btnValider" onAction="#creerContact" text="Valider"/>
         </VBox>
     </bottom>
