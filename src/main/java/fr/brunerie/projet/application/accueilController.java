@@ -94,9 +94,12 @@ public class accueilController {
 
 
         root.getChildren().remove(btnAccueil);
+        root.getChildren().remove(carnetAdresse);
+        root.getChildren().remove(lancerAppli);
+        root.setBackground(null);
+
         Scene scene = VboxAccueil.getScene();
         scene.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
-            System.out.println(isCTRL);
             if (event.getCode() == KeyCode.CONTROL) {
                 isCTRL = true;
             }
@@ -148,7 +151,6 @@ public class accueilController {
     public void editerPersonne() throws IOException {
         if (this.personnes.getSelectionModel().getSelectedItem() != null) {
             Personne personne = this.personnes.getSelectionModel().getSelectedItem();
-            System.out.println(personne.getIdPersonne());
             EditionStage editionStage = new EditionStage(personne.getIdPersonne());
             this.rafraichirListePersonnes();
         }

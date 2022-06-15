@@ -25,15 +25,12 @@ public class editionController {
 
     public void initialize() {
         Platform.runLater(() -> {
-
-            System.out.println( " idPersonne initialize : " + this.idPersonne);
             Personne personne = PersonneManager.getInstance().getPersonne(this.idPersonne);
             this.nomPersonneField.setText(personne.getNom());
             this.prenomPersonneField.setText(personne.getPrenom());
             this.adressePersonneField.setText(personne.getAdresse());
             this.emailPersonneField.setText(personne.getMail());
             this.telPersonneField.setText(personne.getTelephone());
-            System.out.println(personne.getIdPersonne());
         });
     }
 

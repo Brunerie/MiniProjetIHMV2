@@ -2,6 +2,7 @@ package fr.brunerie.projet.application;
 
 import fr.brunerie.projet.metier.manager.PersonneManager;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
@@ -30,6 +31,11 @@ public class ajoutContactController {
             PersonneManager.getInstance().createPersonne(nom, prenom, adresse, email,tel);
             Stage stage = (Stage) btnValider.getScene().getWindow();
             stage.close();
+        }else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erreur");
+            alert.setHeaderText("Veuillez remplir tous les champs");
+            alert.showAndWait();
         }
     }
 

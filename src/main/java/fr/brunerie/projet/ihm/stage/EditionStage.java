@@ -14,7 +14,6 @@ public class EditionStage extends Stage{
         Scene scene = new Scene(loader.load(), 600,500);
         editionController controller = loader.getController();
         controller.setIdPersonne(idPersonne);
-        System.out.println("idPersonne = " + idPersonne);
         this.setScene(scene);
         this.setTitle("Editer Personne");
         this.setResizable(false);
