@@ -3,6 +3,7 @@ package fr.brunerie.projet.ihm.stage;
 import fr.brunerie.projet.application.editionController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,6 +19,7 @@ public class EditionStage extends Stage{
         this.setTitle("Editer Personne");
         this.setResizable(false);
         this.sizeToScene();
+        this.initModality(Modality.APPLICATION_MODAL);
         this.showAndWait();
     }
 }

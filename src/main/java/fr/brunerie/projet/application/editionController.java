@@ -54,8 +54,8 @@ public class editionController {
                 }else{
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Erreur");
-                    alert.setHeaderText("Numéro de téléphone invalide");
-                    alert.setContentText("Veuillez entrer un numéro de téléphone valide");
+                    alert.setHeaderText("Numero de telephone invalide");
+                    alert.setContentText("Veuillez entrer un numero de telephone valide");
                     alert.showAndWait();
                 }
             }
